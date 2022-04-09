@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TSMO;
 
-namespace TSMO
+public readonly record struct Channel(int CountSetup, double ProbabilityDefeat, double RateSetup)
 {
-    internal class Channel
-    {
-    }
+    public double GetRateChannel() => CountSetup * ProbabilityDefeat * RateSetup;
 }
